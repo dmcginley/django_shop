@@ -20,6 +20,7 @@
     },
     "peacock.color": "#1e5475",
     "cSpell.words": [
+        "allauth",
         "gunicorn"
     ]
 }
