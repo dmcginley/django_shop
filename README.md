@@ -47,9 +47,13 @@
 - [Django](https://www.djangoproject.com/)
 - [Python3](https://www.python.org/)
 
-### Libraries &  utilities used 
+### Libraries &  applications used 
+* [django-allauth](https://django-allauth.readthedocs.io/en/latest/overview.html)
+
+
+
 ## Features 
-## Site layout
+## Site Layout
 ## Accessibility
 
 
@@ -73,7 +77,7 @@
 * Enter required details e.g. username password and press register
 * You'll be redirected to the login page so that you'+ll be able to login to your new account
 
-**Add a item to cart**
+**Add an item to cart**
 
 
 ## Error Handling

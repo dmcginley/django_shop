@@ -37,7 +37,6 @@ CSRF_TRUSTED_ORIGINS = ['https://*.railway.app', 'https://*.127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'shop_app.apps.ShopAppConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -46,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'storages',
     'django.contrib.sites',
+    'shop_app',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -89,6 +89,7 @@ AUTHENTICATION_BACKENDS = [
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -163,7 +164,7 @@ STATIC_URL = '/staticfiles/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 
-SITE_ID = 1
+SITE_ID = 2
 
 
 # Default primary key field type
