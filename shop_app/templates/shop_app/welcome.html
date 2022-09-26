@@ -1,0 +1,21 @@
+{% extends 'shop_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container py-4">
+    <h1 class="">Welcome Page</h1>
+
+
+    <div>
+        <div>
+            {% if user.is_authenticated %}
+            <p>welcome {{ user.username }}</p>
+            {% else %}
+            <h2>Please login</h2>
+            {% endif %}
+        </div>
+        <p class="text-center fst-italic">[ Shop under construction... come back soon ]</p>
+    </div>
+
+</section>
+{% endblock content %}
