@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'storages',
     'django.contrib.sites',
-    'shop_app',
+    'shop_app.apps.ShopAppConfig',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -66,7 +66,10 @@ ROOT_URLCONF = "django_shop.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'templates')],
+        "DIRS": [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -154,6 +157,9 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+
+# APPEND_SLASH = False
+APPEND_SLASH = True
 
 
 # Static files (CSS, JavaScript, Images)
