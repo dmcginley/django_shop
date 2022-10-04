@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from turtle import mode
 from django.shortcuts import render
 from .models import Book
@@ -11,15 +11,17 @@ def home(request):
     return render(request, 'book/index.html', context)
 
 
-def all_books(request):
+class BookListView(ListView):
+    model = Book
+    template_name = 'book/index.html'
 
-    books = Book.objects.all()
+    context_object_name = 'books'
+    # ordering = ['-date_posted']  # date posted in reverse order
+    paginate_by = 24
 
-    context = {
-        'books': books,
-    }
-    return render(request, 'book/books.html', context)
 
+class BookDetailView(DetailView):
+    model = Book
 
 # class BookListView(ListView):
 #     mode = Book
