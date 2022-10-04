@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-from pathlib import Path
 import site
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,16 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = "django-insecure-vhx4jr45#q_+lde18#*03(e(^jterx68_!$w-ie$2t3y=#_#1y"
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # DEBUG = os.environ.get('DEBUG_VALUE') == 'True'
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = ['https://*.railway.app', 'https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ["https://*.railway.app", "https://*.127.0.0.1"]
 
 
 # Application definition
@@ -43,12 +43,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'storages',
-    'django.contrib.sites',
-    'shop_app.apps.ShopAppConfig',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    "storages",
+    "book.apps.BookConfig",
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
 ]
 
 MIDDLEWARE = [
@@ -67,8 +67,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
+            os.path.join(BASE_DIR, "templates"),
+            os.path.join(BASE_DIR, "templates", "allauth"),
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -84,23 +84,22 @@ TEMPLATES = [
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
+    "django.contrib.auth.backends.ModelBackend",
     # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
-LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = "/accounts/login/"
+LOGIN_REDIRECT_URL = "/"
 
 WSGI_APPLICATION = "django_shop.wsgi.application"
 
@@ -108,24 +107,24 @@ WSGI_APPLICATION = "django_shop.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DATABASE_NAME'),
-        'USER': os.environ.get('DATABASE_USER'),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-        'HOST': os.environ.get('DATABASE_HOST'),
-        'PORT': os.environ.get('DATABASE_PORT'),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": os.environ.get("DATABASE_NAME"),
+#         "USER": os.environ.get("DATABASE_USER"),
+#         "PASSWORD": os.environ.get("DATABASE_PASSWORD"),
+#         "HOST": os.environ.get("DATABASE_HOST"),
+#         "PORT": os.environ.get("DATABASE_PORT"),
+#     }
+# }
 
 
 # Password validation
@@ -159,16 +158,19 @@ USE_I18N = True
 USE_TZ = True
 
 # APPEND_SLASH = False
-APPEND_SLASH = True
+# APPEND_SLASH = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-# STATIC_URL = "static/"
-STATIC_URL = 'staticfiles/'
+STATIC_URL = "static/"
+# STATIC_URL = 'staticfiles/'
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+MEDIA_URL = "media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 SITE_ID = 2
 

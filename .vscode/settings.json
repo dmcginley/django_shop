@@ -1,27 +1,13 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#28719e",
-        "activityBar.background": "#28719e",
-        "activityBar.foreground": "#e7e7e7",
-        "activityBar.inactiveForeground": "#e7e7e799",
-        "activityBarBadge.background": "#df80bb",
-        "activityBarBadge.foreground": "#15202b",
-        "commandCenter.border": "#e7e7e799",
-        "sash.hoverBorder": "#28719e",
-        "statusBar.background": "#1e5475",
-        "statusBar.foreground": "#e7e7e7",
-        "statusBarItem.hoverBackground": "#28719e",
-        "statusBarItem.remoteBackground": "#1e5475",
-        "statusBarItem.remoteForeground": "#e7e7e7",
-        "titleBar.activeBackground": "#1e5475",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveBackground": "#1e547599",
-        "titleBar.inactiveForeground": "#e7e7e799"
-    },
-    "peacock.color": "#1e5475",
-    "cSpell.words": [
-        "allauth",
-        "gunicorn",
-        "socialaccount"
-    ]
+  "cSpell.words": ["allauth", "gunicorn", "socialaccount"]
+  // "[python]": {
+  //   "editor.defaultFormatter": "ms-python.python",
+  //   "editor.formatOnSave": true,
+  //   "editor.codeActionsOnSave": {
+  //     "source.organizeImports": true
+  //   }
+  // },
+  // "isort.args": ["--profile", "black"],
+  // "python.formatting.provider": "black",
+  // "python.formatting.blackArgs": ["--line-length=79"]
 }
