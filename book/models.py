@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import mark_safe
 from django.core.files import File
 import os
 
@@ -25,3 +26,8 @@ class Book(models.Model):
 
     def __str__(self):
         return self.name
+
+    # def image_tag(self):
+    #     return mark_safe('<img src="/directory/%s" width="150" height="150" />' % (self.main_picture_medium))
+
+    # image_tag.short_description = 'main_picture_medium'

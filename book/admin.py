@@ -14,5 +14,6 @@ from .models import Book
 class BookAdmin(admin.ModelAdmin):
     search_fields = ('title', 'alternative_titles_en',
                      'alternative_titles_ja', 'authors', 'genres')
+    # list_display = ['image_tag', 'title', 'authors', 'genres']
     list_display = ['title', 'authors', 'genres']
     list_filter = ('title', 'authors', 'genres')

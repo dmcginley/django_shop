@@ -20,11 +20,11 @@ from django.urls import include, path
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="book/index.html")),
+    # path('', TemplateView.as_view(template_name="book/index.html")),
     path('admin/', admin.site.urls),
     # path('', include('book.urls')),
     path('accounts/', include('allauth.urls')),
-    path('books/', include('book.urls')),
+    path('', include('book.urls')),
 ]
 
 

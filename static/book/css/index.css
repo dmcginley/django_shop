@@ -1,6 +1,13 @@
 /* google font - Work Sans  */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,700;1,400&display=swap');
 
+
+
+
+.x-cloak {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +16,8 @@
 
 :root {
     --white: rgb(250, 250, 250);
-    --black: rgb(20, 20, 20);
+    --black: rgb(15, 15, 15);
+    --gray-black: rgb(41, 41, 41);
 }
 
 
@@ -27,7 +35,7 @@ body {
 
 
 .black-bar {
-    background-color: rgb(39, 39, 39);
+    background-color: var(--gray-black);
     /* height: 50px; */
     font-size: 1.4rem;
     padding: .4em;
@@ -39,27 +47,109 @@ body {
 
 .comic-main-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     /* gap: 10px; */
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 .comic-container {
-    background-color: rgb(90, 199, 199);
-    margin: 4px;
+    /* background-color: rgb(90, 199, 199); */
+    /* margin: 4px; */
+    padding: 1em;
+}
+
+.img-container {
+    /* height: 340px; */
+    /* background-color: blueviolet; */
+
 }
 
 img {
     /* object-fit: cover; */
-    max-width: 100%;
+    width: 100%;
     /* height: 340px; */
     background-color: rgb(183, 196, 196);
-    transition: 100ms;
+    margin-bottom: 1em;
+    transition: 40ms;
+    border-radius: 2px;
     box-shadow: 0 14px 28px -14px rgba(24, 24, 24, 0.63);
 }
 
+/* .img-hover:hover {
+    transform: scale(200%);
+} */
 
-img:hover {
-    /* filter: opacity(.5) grayscale(.4); */
-    outline: solid rgb(255, 211, 15) 3px;
+.comic-text {
+    /* background-color: rgb(122, 122, 236); */
+}
+
+.flex-container {
+    display: flex;
+    /* background-color: aquamarine; */
+    padding: 1em;
+}
+
+.detail-content {
+    margin-left: 2rem;
+}
+
+.detail-text {
+    margin-bottom: 3rem;
+}
+
+
+
+.button {
+    background-color: rgb(0, 121, 143);
+    font-weight: 600;
+    color: aliceblue;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 80ms;
+}
+
+.button:hover {
+    color: aliceblue;
+    background-color: rgb(0, 84, 99);
+
+}
+
+.expand-btn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: var(--white);
+    background-color: var(--gray-black);
+}
+
+
+
+.expand-text {
+    padding: 2rem;
+    background-color: rgb(243, 243, 243);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    background-color: rgb(189, 0, 63);
+    color: aliceblue;
+}
+
+.brand {
+    margin-bottom: 0;
+    padding-left: 2rem;
 }
